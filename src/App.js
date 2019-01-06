@@ -16,7 +16,7 @@ class App extends Component {
     }
   }
 
-  toggleColorSelection = (index) => {
+  toggleColor = (index) => {
     const color = this.state.colors[index]
     color.selected = !color.selected
     this.setState({ ...this.state.colors })
@@ -44,7 +44,7 @@ class App extends Component {
           <div className="row">
             <div className="col-3">
               <h2 className="h4 text-center mb-4">Colors</h2>
-              <ColorList colors={ this.state.colors } handleToggleColorSelection={ this.toggleColorSelection } />
+              <ColorList colors={ this.state.colors } toggleColor={ this.toggleColor } />
             </div>
             <div className="col">
               <h2 className="h4 text-center mb-4">Mix Result</h2>
